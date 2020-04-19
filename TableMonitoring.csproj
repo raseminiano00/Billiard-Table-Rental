@@ -88,6 +88,22 @@
     </Compile>
     <Compile Include="View\ILoginView.cs" />
     <Compile Include="View\ITableMonitorView.cs" />
+    <Compile Include="View\TableViewMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TableViewMonitor.Designer.cs">
+      <DependentUpon>TableViewMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TableView\IDragable.cs" />
+    <Compile Include="View\TableView\TableManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\TableView\TableMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\TableView\TableView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="View\ViewModel\TableViewModel\TableViewModel.cs" />
     <Compile Include="View\ViewModel\TableViewModel\ViewModelBaseClass.cs" />
     <EmbeddedResource Include="LoginForm.resx">
@@ -101,6 +117,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TableMonitor.resx">
       <DependentUpon>TableMonitor.cs</DependentUpon>

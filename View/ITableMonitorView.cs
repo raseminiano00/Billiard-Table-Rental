@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TableMonitoring.Model;
 using TableMonitoring.Presenter;
-namespace TableMonitoring.View
+namespace TableMonitoring
 {
     public interface ITableMonitorView
     {

@@ -117,10 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Table1" xml:space="preserve">
-    <value>C:\Users\Administrator\Downloads\Table\Table_Vertical.png</value>
-  </data>
-  <data name="Table_Vertical" xml:space="preserve">
-    <value>C:\Users\Administrator\Downloads\Table\table.png</value>
-  </data>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
 </root>

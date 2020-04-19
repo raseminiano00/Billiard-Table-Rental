@@ -20,8 +20,8 @@ namespace TableMonitoring
             var repository = new Repository.UserMysqlRepository();
             var view = new LoginForm();
             var presenter = new Presenter.LoginPresenter(view, repository);
-
-            Application.Run(view);
+            var tableView = new TableViewMonitor();
+            Application.Run(tableView);
         }
     }
 }
