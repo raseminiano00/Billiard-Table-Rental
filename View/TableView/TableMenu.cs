@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace TableMonitoring
 {
-    public class ViewModelBaseClass : INotifyPropertyChanged
+    public class TableMenu : ContextMenuStrip
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        
     }
 }

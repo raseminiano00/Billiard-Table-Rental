@@ -14,7 +14,6 @@ namespace TableMonitoring
         private double RackRate;
         private int TotalRacks;
         private Transaction duplicateTransaction;
-
         public TransactionBuilder SetTimeStarted(DateTime timeStarted)
         {
             this.TimeStarted = timeStarted;
@@ -66,6 +65,5 @@ namespace TableMonitoring
             createdTransaction.TotalRacks = this.duplicateTransaction.  TotalRacks;
             return createdTransaction;
         }
-
     }
 }

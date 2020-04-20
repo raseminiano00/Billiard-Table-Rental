@@ -23,7 +23,7 @@ namespace TableMonitoring.Presenter
 
         public void updateTable()
         {
-            var tableList = TableView();
+            var tableList = GetTableViews();
             _view.tableList = tableList;
         }
 
@@ -54,20 +54,20 @@ namespace TableMonitoring.Presenter
             tableTransaction.TimeEnded= DateTime.Now;
             table.SetTransaction(tableTransaction, _repository.saveCheckOutTransaction());
         }
-        private BindingList<TableViewModel> TableView()
+        private List<TableViewModel> GetTableViews()
         {
-            var ret = new BindingList<TableViewModel>();
+            var ret = new List<TableViewModel>();
             foreach (TableModel model in _repository.GetAllTables())
             {
                 var temp = new TableViewModel(model);
                 ret.Add(temp);
             }
-           return ret;
+            return ret;
         }
 
         internal void RefreshTable()
         {
-            _view.tableList = TableView();
+            _view.tableList = GetTableViews();
         }
         public void TablePayOut(int i)
         {

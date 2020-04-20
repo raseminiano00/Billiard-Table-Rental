@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,5 +23,14 @@ namespace TableMonitoring
         public string Transaction { get { return model.TransactionType; } }
         public string TableState{ get { return model.State; } }
         public double RentAmount { get { return model.TransactionAmount; } }
+
+        public Point GetLocation()
+        {
+            return new Point(model.X,model.Y);
+        }
+        public Size GetSize()
+        {
+            return new Size(model.width, model.height);
+        }
     }
 }

@@ -54,7 +54,11 @@ namespace TableMonitoring
                 var transType = TableTransactionFactory.GetTransType(Convert.ToInt32(row["TRANSACTION"].ToString()));
                 var tableState = TableStateFactory.getTableStateByCode(Convert.ToInt32(row["STATE"].ToString()));
                 var temp = new DbTableBuilder(transType,tableState,transaction)
-                    .SetTabledId(Convert.ToInt32(row["TABLE"].ToString())).Construct();
+                    .SetTabledId(Convert.ToInt32(row["TABLE"].ToString()))
+                    .SetX(Convert.ToInt32(row["X"].ToString()))
+                    .SetY(Convert.ToInt32(row["Y"].ToString()))
+                    .SetHeight(Convert.ToInt32(row["Height"].ToString()))
+                    .SetWidth(Convert.ToInt32(row["Width"].ToString())).Construct();
 
                 ret.Add(temp);
             }

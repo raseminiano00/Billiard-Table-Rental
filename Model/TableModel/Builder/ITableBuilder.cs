@@ -9,6 +9,11 @@ namespace TableMonitoring
     public interface ITableBuilder
     {
         ITableBuilder SetTabledId(int id);
+        ITableBuilder SetY(int val);
+        ITableBuilder SetX(int val);
+        ITableBuilder SetWidth(int val);
+        ITableBuilder SetHeight(int val);
+
         TableModel Construct();
     }
 }

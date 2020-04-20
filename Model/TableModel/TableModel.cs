@@ -13,7 +13,13 @@ namespace TableMonitoring
         private ITableTransaction rentTransaction;
         private Transaction currentTransaction;
 
-        public int TableId{ get; set; }
+        public int TableId { get; set; }
+
+        public int X { get; set; }
+        public int Y { get; set; }
+        public int width { get; set; }
+        public int height { get; set; }
+
         public string State { get { return tableState.State(); } }
 
         public TableModel(ITableState state,Transaction trans)
