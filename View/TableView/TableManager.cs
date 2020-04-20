@@ -25,7 +25,36 @@ namespace TableMonitoring
         private Control activeControl;
         private Point prevPos;
         private TableView interactedTable;
-        private ContextMenuStrip tableMenu;
+        public ContextMenuStrip tableMenu { private get; set; }
+        private List<TableView> tables;
+
+        public void SetTables(Control[] controls)
+        {
+            foreach(Control control in controls)
+            {
+                TableView newPanel = control as TableView;
+                newPanel.MouseDown += new MouseEventHandler(MouseDownEvent);
+                newPanel.MouseMove += new MouseEventHandler(MouseMoveEvent);
+                newPanel.MouseUp += new MouseEventHandler(MouseUpEvent);
+                this.Controls.Add(newPanel);
+                newPanel.Show();
+            }
+
+        }
+        public void SetTables(List<TableView> tables)
+        {
+            this.tables = tables;
+            SetTableControls();
+        }
+
+        private void SetTableControls()
+        {
+            foreach (TableView view in tables) {
+                AddControl(view);
+            }
+            Console.WriteLine();
+        }
+
         private void time_OnTick(object sender, EventArgs e)
         {
             activeControl = null;
@@ -36,7 +65,6 @@ namespace TableMonitoring
             newPanel.MouseMove += new MouseEventHandler(MouseMoveEvent);
             newPanel.MouseUp += new MouseEventHandler(MouseUpEvent);
             this.Controls.Add(newPanel);
-            newPanel.Show();
         }
         private bool OutsideHeight(Point loc)
         {

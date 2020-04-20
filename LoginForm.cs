@@ -50,7 +50,8 @@ namespace TableMonitoring
         public void successLogin()
         {
             var tableRepo = new TableMySqlRepository();
-            var tableView = new TableMonitor();
+            //var tableView = new TableMonitor();
+            var tableView = new TableViewMonitor();
             var tablePresenter = new TablePresenter(tableRepo, tableView);
             tableView.Show();
             this.Hide();

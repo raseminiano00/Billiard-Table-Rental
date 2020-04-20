@@ -94,6 +94,7 @@
     <Compile Include="View\TableViewMonitor.Designer.cs">
       <DependentUpon>TableViewMonitor.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TableView\TableManagerBuilder.cs" />
     <Compile Include="View\TableView\IDragable.cs" />
     <Compile Include="View\TableView\TableManager.cs">
       <SubType>Component</SubType>
@@ -104,8 +105,8 @@
     <Compile Include="View\TableView\TableView.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="View\TableView\TableViewBuilder.cs" />
     <Compile Include="View\ViewModel\TableViewModel\TableViewModel.cs" />
-    <Compile Include="View\ViewModel\TableViewModel\ViewModelBaseClass.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +122,12 @@
     </Compile>
     <EmbeddedResource Include="TableMonitor.resx">
       <DependentUpon>TableMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TableViewMonitor.resx">
+      <DependentUpon>TableViewMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TableView\TableView.resx">
+      <DependentUpon>TableView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

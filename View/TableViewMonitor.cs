@@ -22,8 +22,28 @@ namespace TableMonitoring
         }
         private TableManager table;
 
-        public TablePresenter presenter { set => throw new NotImplementedException(); }
-        public BindingList<TableViewModel> tableList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public TablePresenter presenter { private get; set; }
         public int SelectedTable { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        private List<TableViewModel> _tableList;
+        public List<TableViewModel> tableList
+        {
+            get {
+                return _tableList;
+            }
+            set {
+                _tableList = value;
+                table.SetTables(new TableViewBuilder(value).Construct());
+            }
+        }
+
+        private void LayoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

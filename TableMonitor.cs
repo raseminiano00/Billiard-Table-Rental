@@ -20,8 +20,8 @@ namespace TableMonitoring
             dgvTableRefresher.Start();
         }
 
-        public BindingList<TableViewModel> tableList {
-            get { return (BindingList<TableViewModel>)this.dataGridView1.DataSource; }
+        public List<TableViewModel> tableList {
+            get { return (List<TableViewModel>)this.dataGridView1.DataSource; }
             set { dataGridView1.DataSource = value; }
         }
 

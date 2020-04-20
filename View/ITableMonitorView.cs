@@ -11,10 +11,8 @@ namespace TableMonitoring
     public interface ITableMonitorView
     {
         TablePresenter presenter { set; }
-        BindingList<TableViewModel> tableList { get; set; }
+        List<TableViewModel> tableList { get; set; }
 
         int SelectedTable { get; set; }
-
-
     }
 }
