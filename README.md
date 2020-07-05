@@ -3,6 +3,7 @@ Program that monitors the Billiard Table Rental created
 
 C# Windows Form Application
 
+This project is made to practice Microsoft Entityframework with Pomelo Mysql
 
 For configuration of Pomelo : 
 
